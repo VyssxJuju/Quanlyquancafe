@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cafe-manager-c433e-firebase-adminsdk-ek0vv-9e78b5785f.json")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cafe-mama-ebb52-firebase-adminsdk-v270c-a9c1316cbb.json")]
 
 

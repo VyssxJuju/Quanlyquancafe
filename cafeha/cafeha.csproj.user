@@ -7,13 +7,19 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AddMenuWindow.xaml.cs">
+    <Compile Update="Views\AddDrinkWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddOrderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\DrinkManagementWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\EmployeeManagementWindow.xaml.cs">
+    <Compile Update="Views\EditDrinkWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditOrderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\LoginWindow.xaml.cs">
@@ -22,27 +28,30 @@
     <Compile Update="Views\MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\OrderManagementWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\OrderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\RegisterWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\StatisticsWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\AddMenuWindow.xaml">
+    <Page Update="Views\AddDrinkWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddOrderWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DrinkManagementWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\EmployeeManagementWindow.xaml">
+    <Page Update="Views\EditDrinkWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EditOrderWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\images\EditDrinkWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\LoginWindow.xaml">
@@ -51,16 +60,10 @@
     <Page Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\OrderManagementWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Views\OrderWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RegisterWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\StatisticsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

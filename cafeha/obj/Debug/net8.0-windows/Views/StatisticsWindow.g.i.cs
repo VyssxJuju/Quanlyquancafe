@@ -68,7 +68,7 @@ namespace cafeha {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/cafeha;V1.0.0.0;component/views/statisticswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/cafeha;component/views/statisticswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\StatisticsWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

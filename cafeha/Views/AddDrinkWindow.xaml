@@ -1,0 +1,53 @@
+﻿<Window x:Class="cafeha.AddDrinkWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Thêm Đồ Uống" Height="546" Width="400">
+    <Grid Margin="20">
+        <!-- Cấu trúc lưới với 2 cột và 5 hàng -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Tên Đồ Uống -->
+        <StackPanel Orientation="Vertical" Grid.Row="0" Margin="0,10">
+            <TextBlock Text="Tên Đồ Uống" HorizontalAlignment="Left"/>
+            <TextBox x:Name="NameTextBox" Margin="0,5" Height="30"/>
+        </StackPanel>
+
+        <!-- Giá -->
+        <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0,10">
+            <TextBlock Text="Giá" HorizontalAlignment="Left"/>
+            <TextBox x:Name="PriceTextBox" Margin="0,5" Height="30"/>
+        </StackPanel>
+
+        <!-- Danh Mục -->
+        <StackPanel Orientation="Vertical" Grid.Row="2" Margin="0,10">
+            <TextBlock Text="Danh Mục" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="CategoryComboBox" Margin="0,5" Height="30">
+                <!-- Các danh mục có sẵn có thể được gán từ code-behind hoặc database -->
+                <ComboBoxItem Content="Cà Phê"/>
+                <ComboBoxItem Content="Trà"/>
+                <ComboBoxItem Content="Sinh Tố"/>
+                <ComboBoxItem Content="Nước Ép"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Ảnh -->
+        <StackPanel Orientation="Vertical" Grid.Row="3" Margin="0,10">
+            <TextBlock Text="Ảnh" HorizontalAlignment="Left"/>
+            <Button Content="Chọn Ảnh" HorizontalAlignment="Left" Click="SelectImage_Click" Margin="0,5"/>
+            <TextBox x:Name="ImageUrlTextBox" Height="128" IsReadOnly="True" Width="194"/>
+        </StackPanel>
+
+        <!-- Nút Thêm -->
+        <Button Content="Thêm" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Margin="10,20,10,10" Width="100" Height="40" Click="AddDrink_Click"/>
+    </Grid>
+</Window>

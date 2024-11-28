@@ -1,75 +1,93 @@
 ﻿using System;
 using System.Windows;
-using cafeha.Controller;
+using MySql.Data.MySqlClient;
 
 namespace cafeha
 {
     public partial class LoginWindow : Window
     {
-        private FirebaseService _firebaseService;
+        private string _connectionString = "Server=127.0.0.1; Database=cafehaaaaa; Uid=root; Pwd=;"; // Kết nối với MySQL
 
         public LoginWindow()
         {
             InitializeComponent();
-            _firebaseService = new FirebaseService(); // Khởi tạo FirebaseService
         }
 
-        private async void LoginButton_Click(object sender, RoutedEventArgs e)
+        // Sự kiện khi nhấn nút Đăng nhập
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = UsernameTextBox.Text.Trim();
-            string password = PasswordTextBox.Password.Trim();
+            string username = UsernameTextBox.Text;
+            string password = PasswordTextBox.Password;
 
-            // Kiểm tra thông tin đăng nhập
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return; // Không thực hiện đăng nhập nếu thông tin thiếu
+                MessageBox.Show("Vui lòng nhập tên đăng nhập và mật khẩu.");
+                return;
             }
 
-            try
+            // Kiểm tra thông tin đăng nhập với cơ sở dữ liệu
+            var role = AuthenticateUser(username, password);
+            if (!string.IsNullOrEmpty(role))
             {
-                // Đăng nhập người dùng và kiểm tra thông tin trong Firestore
-                bool isAuthenticated = await _firebaseService.LoginUser(username, password);
-
-                if (isAuthenticated)
-                {
-                    // Lấy thông tin người dùng hiện tại từ Firestore
-                    string role = await _firebaseService.GetUserRoleAsync(username);
-                    string token = await _firebaseService.GetUserTokenAsync(username);
-
-                    // Kiểm tra token
-                    if (string.IsNullOrEmpty(token))
-                    {
-                        MessageBox.Show("Không có token hợp lệ.", "Lỗi đăng nhập", MessageBoxButton.OK, MessageBoxImage.Error);
-                        return;
-                    }
-
-                    // Chuyển đến MainWindow với vai trò người dùng (có thể là null)
-                    MainWindow mainWindow = new MainWindow(role ?? "guest", username,token); // Truyền vào "guest" nếu role là null
-                    mainWindow.Show(); // Hiện MainWindow
-                    this.Close(); // Đóng cửa sổ đăng nhập
-                }
-                else
-                {
-                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Lỗi đăng nhập", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+                MessageBox.Show("Đăng nhập thành công!");
+                // Chuyển sang cửa sổ chính (MainWindow)
+                MessageBox.Show("Đang mở MainWindow...");
+                MainWindow mainWindow = new MainWindow(role);
+                mainWindow.Show();
+                this.Close();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Lỗi không xác định: " + ex.Message, "Lỗi đăng nhập", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.");
             }
         }
 
+        // Kiểm tra thông tin đăng nhập với cơ sở dữ liệu MySQL và lấy vai trò người dùng
+        private string AuthenticateUser(string username, string password)
+        {
+            string query = "SELECT role FROM Users WHERE username = @username AND password = @password";
+
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@username", username);
+                        command.Parameters.AddWithValue("@password", password);
+
+                        using (var reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                return reader["role"].ToString(); // Lấy vai trò của người dùng
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message);
+                }
+            }
+
+            return null; // Nếu không tìm thấy người dùng
+        }
+
+        // Sự kiện khi nhấn nút Đăng ký
         private void SwitchToRegister_Click(object sender, RoutedEventArgs e)
         {
             RegisterWindow registerWindow = new RegisterWindow();
-            registerWindow.Show(); // Mở cửa sổ đăng ký
-            this.Close(); // Đóng cửa sổ đăng nhập
+            registerWindow.Show();
+            this.Close();  // Đóng cửa sổ đăng nhập khi chuyển sang đăng ký
         }
 
+        // Sự kiện khi nhấn nút Thoát
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown(); 
+            Application.Current.Shutdown();  // Đóng ứng dụng
         }
     }
 }

@@ -9,25 +9,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="cafe-manager-c433e-firebase-adminsdk-ek0vv-9e78b5785f.json" />
+    <None Remove="cafe-mama-ebb52-firebase-adminsdk-v270c-a9c1316cbb.json" />
     <None Remove="Views\images\background.jpg" />
     <None Remove="Views\images\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Firebase.Auth" Version="1.0.0" />
-    <PackageReference Include="FirebaseAdmin" Version="3.0.1" />
-    <PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
-    <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
-    <PackageReference Include="Google.Cloud.Firestore" Version="3.9.0" />
+    <Content Include="cafe-mama-ebb52-firebase-adminsdk-v270c-a9c1316cbb.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="cafe-manager-c433e-firebase-adminsdk-ek0vv-9e78b5785f.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <PackageReference Include="MySql.Data" Version="9.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Views\images\background.jpg" />
     <Resource Include="Views\images\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
 
 </Project>

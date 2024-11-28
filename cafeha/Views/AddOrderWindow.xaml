@@ -1,0 +1,27 @@
+﻿<Window x:Class="cafeha.Views.AddOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Thêm Đơn Hàng" Height="400" Width="400">
+    <Grid Margin="20">
+        <StackPanel>
+            <!-- UserId -->
+            <TextBlock Text="UserId" Margin="0,10"/>
+            <TextBox x:Name="UserIdTextBox" Margin="0,5" Height="30"/>
+
+            <!-- ComboBox cho ItemId (đồ uống) -->
+            <TextBlock Text="Chọn Đồ Uống" Margin="0,10"/>
+            <ComboBox x:Name="ItemComboBox" Margin="0,5" Height="30"/>
+
+            <!-- Quantity -->
+            <TextBlock Text="Số Lượng" Margin="0,10"/>
+            <TextBox x:Name="QuantityTextBox" Margin="0,5" Height="30"/>
+
+            <!-- Tổng Tiền -->
+            <TextBlock Text="Tổng Tiền" Margin="0,10"/>
+            <TextBox x:Name="TotalPriceTextBox" Margin="0,5" Height="30" IsReadOnly="True"/>
+
+            <!-- Nút Lưu -->
+            <Button Content="Lưu" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="40" Margin="10,20" Click="SaveButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

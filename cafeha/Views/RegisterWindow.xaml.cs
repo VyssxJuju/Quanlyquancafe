@@ -1,59 +1,120 @@
 ﻿using System;
 using System.Windows;
-using cafeha.Controller;
+using MySql.Data.MySqlClient;
 
 namespace cafeha
 {
     public partial class RegisterWindow : Window
     {
-        private FirebaseService _firebaseService;
+        private string _connectionString = "Server=127.0.0.1; Database=cafehaaaaa; Uid=root; Pwd=;"; // Kết nối với MySQL
 
         public RegisterWindow()
         {
             InitializeComponent();
-            _firebaseService = new FirebaseService(); // Khởi tạo FirebaseService
         }
 
-        private async void RegisterButton_Click(object sender, RoutedEventArgs e)
+        // Sự kiện khi nhấn nút Đăng ký
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = UsernameTextBox.Text.Trim(); // Lấy username từ TextBox
-            string password = PasswordTextBox.Password.Trim();
+            string username = UsernameTextBox.Text;
+            string password = PasswordTextBox.Password;
 
-            // Kiểm tra thông tin đăng ký
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ username và mật khẩu.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return; // Không thực hiện đăng ký nếu thông tin thiếu
+                MessageBox.Show("Vui lòng nhập tên đăng nhập và mật khẩu.");
+                return;
             }
 
-            try
+            // Kiểm tra xem tên đăng nhập đã tồn tại chưa
+            if (IsUsernameExists(username))
             {
-                // Đăng ký người dùng và lấy UID
-                string uid = await _firebaseService.RegisterUser(username, password);
+                MessageBox.Show("Tên đăng nhập đã tồn tại. Vui lòng chọn tên khác.");
+                return;
+            }
 
-                // Lưu vai trò vào Firestore
-                await _firebaseService.SetUserRoleAsync(uid, "none");
+            // Thêm người dùng mới vào cơ sở dữ liệu
+            bool isRegistered = RegisterUser(username, password);
 
-                MessageBox.Show("Đăng ký thành công! UID: " + uid, "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                // Chuyển đến cửa sổ đăng nhập
+            if (isRegistered)
+            {
+                MessageBox.Show("Đăng ký thành công!");
+                this.Close();  // Đóng cửa sổ đăng ký
                 LoginWindow loginWindow = new LoginWindow();
-                loginWindow.Show();
-                this.Close(); // Đóng cửa sổ đăng ký
+                loginWindow.Show();  // Chuyển sang cửa sổ đăng nhập
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi đăng ký", MessageBoxButton.OK, MessageBoxImage.Error); // Hiển thị thông báo lỗi
+                MessageBox.Show("Đã có lỗi xảy ra trong quá trình đăng ký.");
             }
         }
 
+        // Kiểm tra tên đăng nhập có tồn tại trong cơ sở dữ liệu hay không
+        private bool IsUsernameExists(string username)
+        {
+            string query = "SELECT * FROM Users WHERE username = @username";
 
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@username", username);
 
+                        using (var reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows) // Nếu tên đăng nhập đã tồn tại
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message);
+                }
+            }
+
+            return false;
+        }
+
+        // Thêm người dùng mới vào cơ sở dữ liệu
+        private bool RegisterUser(string username, string password)
+        {
+            string query = "INSERT INTO Users (username, password, role) VALUES (@username, @password, 'none')";
+
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@username", username);
+                        command.Parameters.AddWithValue("@password", password);  // Lưu mật khẩu dưới dạng thô (Nên mã hóa mật khẩu trước khi lưu)
+
+                        int result = command.ExecuteNonQuery();
+
+                        return result > 0;  // Nếu câu lệnh thực thi thành công
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message);
+                }
+            }
+
+            return false;
+        }
+
+        // Sự kiện khi nhấn nút Trở lại Đăng nhập
         private void SwitchToLogin_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow();
-            loginWindow.Show(); // Mở cửa sổ đăng nhập
-            this.Close(); // Đóng cửa sổ đăng ký
+            loginWindow.Show();
+            this.Close();  // Đóng cửa sổ đăng ký khi chuyển sang đăng nhập
         }
     }
 }

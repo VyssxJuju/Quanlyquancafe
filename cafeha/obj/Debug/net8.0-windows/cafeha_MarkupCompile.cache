@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\code\btl_quanlyquancafe\cafeha\cafeha\App.xaml
-5-1446094635
-1-1237643081
-141585273637
-228-1423302193
-Views\AddMenuWindow.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\OrderWindow.xaml;Views\RegisterWindow.xaml;
+71764913826
+11374208381
+10-208590776
+206-574852764
+Views\AddDrinkWindow.xaml;Views\DrinkManagementWindow.xaml;Views\EditDrinkWindow.xaml;Views\images\EditDrinkWindow.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegisterWindow.xaml;
 
 False
 

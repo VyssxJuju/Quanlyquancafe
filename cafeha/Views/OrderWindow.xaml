@@ -1,25 +1,15 @@
-﻿<Window x:Class="cafeha.Views.OrderWindow"
+﻿<Window x:Class="cafeha.OrderWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Đặt Hàng" Height="400" Width="400">
-    <Grid>
-        <StackPanel Margin="10">
-            <TextBlock Text="Thông tin Đơn Hàng" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
-            <TextBlock Text="Tên Đồ Uống:" FontSize="16"/>
-            <TextBlock x:Name="DrinkNameTextBlock" FontSize="16" Margin="0,0,0,10"/>
-            <TextBlock Text="Giá:" FontSize="16"/>
-            <TextBlock x:Name="DrinkPriceTextBlock" FontSize="16" Margin="0,0,0,10"/>
+        Title="Quản Lý Đơn Hàng" Height="450" Width="800">
+    <Grid Margin="20">
+        <DataGrid x:Name="OrderDataGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,60" />
 
-            <TextBlock Text="Số lượng:" FontSize="16" Margin="0,10,0,0"/>
-            <TextBox x:Name="QuantityTextBox" FontSize="16" Width="100" Margin="0,0,0,10"/>
-
-            <TextBlock Text="Loại mang về:" FontSize="16" Margin="0,10,0,0"/>
-            <ComboBox x:Name="TakeAwayComboBox" FontSize="16" Margin="0,0,0,10">
-                <ComboBoxItem Content="Mang về"/>
-                <ComboBoxItem Content="Ngồi tại quán"/>
-            </ComboBox>
-
-            <Button Content="Xác Nhận Đặt Hàng" Click="ConfirmOrder_Click" HorizontalAlignment="Right" Width="120"/>
-        </StackPanel>
+        <!-- Nút Thêm Đơn Hàng -->
+        <Button Content="Thêm Đơn Hàng" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Height="40" Click="AddOrder_Click" />
+        <!-- Nút Sửa Đơn Hàng -->
+        <Button Content="Sửa Đơn Hàng" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="40" Click="EditOrder_Click" />
+        <!-- Nút Xóa Đơn Hàng -->
+        <Button Content="Xóa Đơn Hàng" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100" Height="40" Click="DeleteOrder_Click" />
     </Grid>
 </Window>

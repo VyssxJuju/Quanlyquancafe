@@ -1,55 +1,118 @@
-﻿using cafeha.Model;
-using System.Windows;
+﻿using System;
 using System.Collections.Generic;
-using System.Windows.Controls;
-using Google.Cloud.Firestore;
-using System;
+using System.Windows;
+using cafeha.Views;
+using MySql.Data.MySqlClient;
 
-namespace cafeha.Views
+namespace cafeha
 {
     public partial class OrderWindow : Window
     {
-        public OrderWindow(List<CafeItem> drinks)
+        private string _connectionString = "Server=127.0.0.1; Database=cafehaaaaa; Uid=root; Pwd=;";
+        private List<Order> _orders = new List<Order>();
+
+        public OrderWindow()
         {
             InitializeComponent();
+            LoadOrders(); // Tải danh sách đơn hàng khi cửa sổ mở
+        }
 
-            // Hiển thị thông tin đồ uống đã chọn
-            foreach (var drink in drinks)
+        // Lấy danh sách đơn hàng từ cơ sở dữ liệu và hiển thị lên DataGrid
+        private void LoadOrders()
+        {
+            _orders.Clear();
+            OrderDataGrid.Items.Clear();
+
+            string query = "SELECT * FROM Orders";
+            using (var connection = new MySqlConnection(_connectionString))
             {
-                // Hiển thị tên và giá đồ uống (có thể tùy chỉnh theo nhu cầu)
-                DrinkNameTextBlock.Text += drink.Name + "\n";
-                DrinkPriceTextBlock.Text += drink.Price.ToString("N0") + " đ\n";
+                try
+                {
+                    connection.Open();
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var order = new Order
+                                {
+                                    OrderId = reader.GetInt32("OrderId"),
+                                    ItemId = reader.GetInt32("ItemId"),
+                                    Quantity = reader.GetInt32("Quantity"),
+                                    TotalPrice = reader.GetDecimal("TotalPrice"),
+                                    OrderDate = reader.GetDateTime("OrderDate")
+                                };
+                                _orders.Add(order);
+                                OrderDataGrid.Items.Add(order);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message);
+                }
             }
         }
 
-        private async void ConfirmOrder_Click(object sender, RoutedEventArgs e)
+        // Thêm đơn hàng mới
+        private void AddOrder_Click(object sender, RoutedEventArgs e)
         {
-            string drinkName = DrinkNameTextBlock.Text.Trim();
-            double drinkPrice = Convert.ToDouble(DrinkPriceTextBlock.Text.Replace(" đ", "").Replace(",", ""));
-            int quantity = int.Parse(QuantityTextBox.Text);
-            string takeawayType = (TakeAwayComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            var addOrderWindow = new AddOrderWindow();
+            addOrderWindow.ShowDialog();
 
-            // Tạo đối tượng đơn hàng
-            var order = new
+            // Sau khi thêm đơn hàng thành công, tải lại danh sách đơn hàng
+            LoadOrders();
+        }
+
+        // Sửa đơn hàng
+        private void EditOrder_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedOrder = (Order)OrderDataGrid.SelectedItem;
+
+            if (selectedOrder != null)
             {
-                DrinkName = drinkName,
-                DrinkPrice = drinkPrice,
-                Quantity = quantity,
-                TakeawayType = takeawayType,
-                OrderDate = DateTime.UtcNow // Sử dụng thời gian UTC
-            };
+                var editOrderWindow = new EditOrderWindow(selectedOrder);
+                editOrderWindow.ShowDialog();
+                LoadOrders();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một đơn hàng để sửa.");
+            }
+        }
 
-            // Kết nối với Firestore
-            FirestoreDb db = FirestoreDb.Create("cafe-manager-c433e"); // Thay "cafe-manager-c433e" bằng ID dự án Firestore của bạn
+        // Xóa đơn hàng
+        private void DeleteOrder_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedOrder = (Order)OrderDataGrid.SelectedItem;
 
-            // Lưu đơn hàng vào collection "Orders"
-            DocumentReference docRef = db.Collection("Orders").Document(); // Tạo một tài liệu mới
-            await docRef.SetAsync(order); // Lưu đơn hàng
-
-            // Hiển thị thông báo thành công
-            MessageBox.Show($"Đặt hàng thành công!\nTên: {drinkName}\nGiá: {drinkPrice} đ\nSố lượng: {quantity}\nLoại mang về: {takeawayType}");
-
-            this.Close(); // Đóng cửa sổ đặt hàng
+            if (selectedOrder != null)
+            {
+                string query = "DELETE FROM Orders WHERE OrderId = @OrderId";
+                using (var connection = new MySqlConnection(_connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+                        using (var command = new MySqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@OrderId", selectedOrder.OrderId);
+                            command.ExecuteNonQuery();
+                        }
+                        LoadOrders();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi xóa đơn hàng: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một đơn hàng để xóa.");
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿<Window x:Class="cafeha.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Quản Lý Quán Cafe" Height="600" Width="900">
+        Title="Quản Lý Quán Cafe" Height="650" Width="1000">
     <DockPanel>
 
         <!-- Logo ở trên cùng -->
@@ -15,7 +15,7 @@
             <Button x:Name="MenuItem_AddMenu" Content="Quản lý đồ uống" Height="50" Click="MenuItem_AddMenu_Click"/>
             <Button x:Name="MenuItem_CreateOrder" Content="Các Đơn Hàng" Height="50" Click="MenuItem_CreateOrder_Click"/>
             <Button x:Name="MenuItem_AddRevenue" Content="Ghi Nhận Doanh Thu" Height="50" Click="MenuItem_AddRevenue_Click"/>
-            <Button x:Name="MenuItem_AddStaff" Content="Thêm Nhân Viên" Height="50" Click="MenuItem_AddStaff_Click"/>
+            <Button x:Name="MenuItem_AddStaff" Content="Quản Lý Nhân Viên" Height="50" Click="MenuItem_AddStaff_Click"/>
             <Button x:Name="MenuItem_Logout" Content="Đăng Xuất" Height="35" Margin="0,270,100,0" Click="MenuItem_Logout_Click"/>
         </StackPanel>
 
@@ -24,29 +24,31 @@
             <TextBlock Text="Danh sách đồ uống" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
             <!-- Hiển thị danh sách đồ uống theo loại -->
-            <ItemsControl x:Name="DrinkList" Margin="10,40,10,10">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <GroupBox Header="{Binding Name}">
-                            <ItemsControl ItemsSource="{Binding Items}">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackPanel Orientation="Horizontal" Margin="5">
-                                            <CheckBox Checked="DrinkCheckbox_Checked" Unchecked="DrinkCheckbox_Unchecked" Tag="{Binding}"/>
-                                            <Image Source="{Binding ImageUrl}" Width="50" Height="50" Margin="5"/>
-                                            <TextBlock Text="{Binding Name}" Margin="5" VerticalAlignment="Center"/>
-                                            <TextBlock Text="{Binding Price, StringFormat='{}{0:N0} VND'}" Margin="5" VerticalAlignment="Center"/>
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
-                        </GroupBox>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <ItemsControl x:Name="DrinkList" Margin="10,40,10,10">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <GroupBox Header="{Binding Name}">
+                                <ItemsControl ItemsSource="{Binding Items}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" Margin="5">
+                                                <CheckBox Checked="DrinkCheckbox_Checked" Unchecked="DrinkCheckbox_Unchecked" Tag="{Binding}"/>
+                                                <Image Source="{Binding ImageUrl}" Width="50" Height="50" Margin="5"/>
+                                                <TextBlock Text="{Binding Name}" Margin="5" VerticalAlignment="Center"/>
+                                                <TextBlock Text="{Binding Price, StringFormat='{}{0:N0} VND'}" Margin="5" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </GroupBox>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
 
             <!-- Nơi hiển thị các món đã chọn -->
-            <ListBox x:Name="SelectedDrinksList" Margin="10,300,10,10">
+            <ListBox x:Name="SelectedDrinksList" Margin="591,457,-134,2">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Name}"/>
@@ -54,7 +56,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
 
-            <Button Content="Tạo Đơn Hàng" Click="CreateOrder_Click" Margin="447,449,10,10"/>
+            <Button Content="Tạo Đơn Hàng" Click="CreateOrder_Click" Margin="591,457,-134,2"/>
         </Grid>
 
         <!-- Bảng danh sách món đặc biệt -->
