@@ -29,9 +29,6 @@ namespace cafeha
             var role = AuthenticateUser(username, password);
             if (!string.IsNullOrEmpty(role))
             {
-                MessageBox.Show("Đăng nhập thành công!");
-                // Chuyển sang cửa sổ chính (MainWindow)
-                MessageBox.Show("Đang mở MainWindow...");
                 MainWindow mainWindow = new MainWindow(role);
                 mainWindow.Show();
                 this.Close();
@@ -75,15 +72,6 @@ namespace cafeha
 
             return null; // Nếu không tìm thấy người dùng
         }
-
-        // Sự kiện khi nhấn nút Đăng ký
-        private void SwitchToRegister_Click(object sender, RoutedEventArgs e)
-        {
-            RegisterWindow registerWindow = new RegisterWindow();
-            registerWindow.Show();
-            this.Close();  // Đóng cửa sổ đăng nhập khi chuyển sang đăng ký
-        }
-
         // Sự kiện khi nhấn nút Thoát
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using MySql.Data.MySqlClient;
 
+
 namespace cafeha
 {
     public partial class DrinkManagementWindow : Window
@@ -68,6 +69,7 @@ namespace cafeha
         }
 
         // Sửa đồ uống
+        // Sửa đồ uống
         private void EditDrink_Click(object sender, RoutedEventArgs e)
         {
             // Kiểm tra xem có đồ uống nào được chọn trong DataGrid không
@@ -78,7 +80,7 @@ namespace cafeha
                 // Mở cửa sổ chỉnh sửa đồ uống với thông tin đã chọn
                 var editDrinkWindow = new EditDrinkWindow(
                     selectedDrink.Name,
-                    selectedDrink.Price,
+                    selectedDrink.Price, 
                     selectedDrink.ImageUrl,
                     selectedDrink.Category
                 );
@@ -93,6 +95,7 @@ namespace cafeha
             }
         }
 
+
         // Xóa đồ uống
         private void DeleteDrink_Click(object sender, RoutedEventArgs e)
         {
@@ -104,33 +107,73 @@ namespace cafeha
 
             var selectedDrink = (Drink)DrinkDataGrid.SelectedItem;
 
-            // Xóa khỏi cơ sở dữ liệu
-            string query = "DELETE FROM CafeItems WHERE Name = @Name";
-            using (var connection = new MySqlConnection(_connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    using (var command = new MySqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Name", selectedDrink.Name);
-                        command.ExecuteNonQuery();
-                    }
+            // Hiển thị hộp thoại xác nhận yêu cầu xóa
+            var result = MessageBox.Show(
+                $"Bạn có chắc chắn muốn xóa đồ uống {selectedDrink.Name}?",
+                "Xác nhận xóa",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Warning
+            );
 
-                    // Sau khi xóa đồ uống, tải lại danh sách
-                    LoadDrinks();
-                }
-                catch (Exception ex)
+            // Kiểm tra nếu người dùng chọn Yes
+            if (result == MessageBoxResult.Yes)
+            {
+                // Xóa khỏi cơ sở dữ liệu
+                string query = "DELETE FROM CafeItems WHERE Name = @Name";
+                using (var connection = new MySqlConnection(_connectionString))
                 {
-                    MessageBox.Show("Lỗi khi xóa đồ uống: " + ex.Message);
+                    try
+                    {
+                        connection.Open();
+                        using (var command = new MySqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@Name", selectedDrink.Name);
+                            command.ExecuteNonQuery();
+                        }
+
+                        // Sau khi xóa đồ uống, tải lại danh sách
+                        LoadDrinks();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi xóa đồ uống: " + ex.Message);
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("Đã hủy thao tác xóa.");
+            }
         }
+
 
         // Sự kiện chọn đồ uống từ DataGrid
         private void DrinkDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             // Hiển thị thông tin chi tiết của đồ uống đã chọn (nếu cần)
         }
+
+
+
+        public class Drink
+        {
+            public string Name { get; set; }
+            public decimal Price { get; set; }
+            public string Category { get; set; }
+            public string ImageUrl { get; set; }
+
+            // Thuộc tính này dùng để hiển thị giá dưới dạng VND
+            public string FormattedPrice
+            {
+                get
+                {
+                    return Price.ToString("N0") + " VND"; // Định dạng với dấu phân cách hàng nghìn và VND
+                }
+            }
+
+
+
+        }
+
     }
 }

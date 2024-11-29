@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
+using cafeha.Model;
+using cafeha.Models;
 using MySql.Data.MySqlClient;
 
 namespace cafeha.Views
@@ -8,58 +11,92 @@ namespace cafeha.Views
     public partial class EditOrderWindow : Window
     {
         private string _connectionString = "Server=127.0.0.1; Database=cafehaaaaa; Uid=root; Pwd=;";
-        private List<Order> _orders = new List<Order>(); // Danh sách đơn hàng
-        private List<Drink> _drinks = new List<Drink>(); // Danh sách đồ uống
-        private Order _selectedOrder; // Đơn hàng đang được chỉnh sửa
+        private Order _order;
+        private List<OrderItem> _orderItems = new List<OrderItem>();
+        private List<Drink> _allDrinks = new List<Drink>(); // Danh sách tất cả các đồ uống
 
-        public EditOrderWindow()
+        public EditOrderWindow(int orderId)
         {
             InitializeComponent();
-            LoadOrders(); // Tải danh sách đơn hàng khi cửa sổ mở
-            LoadDrinks(); // Tải danh sách đồ uống vào ComboBox
+            LoadOrder(orderId); // Tải thông tin đơn hàng khi mở cửa sổ
+            LoadAllDrinks(); // Tải tất cả đồ uống để hiển thị bên phải
         }
 
-        // Lấy danh sách đơn hàng từ cơ sở dữ liệu và hiển thị trong ComboBox
-        private void LoadOrders()
+        // Lấy thông tin đơn hàng từ cơ sở dữ liệu
+        private void LoadOrder(int orderId)
         {
-            string query = "SELECT * FROM Orders"; // Lấy tất cả đơn hàng từ bảng Orders
+            string orderQuery = "SELECT o.OrderId, o.TotalPrice, o.OrderDate " +
+                                 "FROM Orders o WHERE o.OrderId = @OrderId";
             using (var connection = new MySqlConnection(_connectionString))
             {
                 try
                 {
                     connection.Open();
-                    using (var command = new MySqlCommand(query, connection))
+                    using (var command = new MySqlCommand(orderQuery, connection))
                     {
+                        command.Parameters.AddWithValue("@OrderId", orderId);
                         using (var reader = command.ExecuteReader())
                         {
-                            while (reader.Read())
+                            if (reader.Read())
                             {
-                                var order = new Order
+                                _order = new Order
                                 {
                                     OrderId = reader.GetInt32("OrderId"),
-                                    ItemId = reader.GetInt32("ItemId"),
-                                    Quantity = reader.GetInt32("Quantity"),
                                     TotalPrice = reader.GetDecimal("TotalPrice"),
                                     OrderDate = reader.GetDateTime("OrderDate")
                                 };
-
-                                _orders.Add(order);
-                                OrderComboBox.Items.Add(order); // Thêm đơn hàng vào ComboBox
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi khi tải dữ liệu đơn hàng: " + ex.Message);
+                    MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message);
                 }
             }
+
+            string orderItemsQuery = "SELECT oi.Quantity, ci.Name AS DrinkName, ci.Price AS DrinkPrice, ci.Id AS ItemId " +
+                                     "FROM OrderItems oi " +
+                                     "JOIN CafeItems ci ON oi.ItemId = ci.Id " +
+                                     "WHERE oi.OrderId = @OrderId";
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (var command = new MySqlCommand(orderItemsQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@OrderId", orderId);
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var orderItem = new OrderItem
+                                {
+                                    ItemId = reader.GetInt32("ItemId"),
+                                    DrinkName = reader.GetString("DrinkName"),
+                                    Quantity = reader.GetInt32("Quantity"),
+                                    DrinkPrice = reader.GetDecimal("DrinkPrice"),
+                                    TotalPrice = reader.GetInt32("Quantity") * reader.GetDecimal("DrinkPrice")
+                                };
+                                _orderItems.Add(orderItem);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message);
+                }
+            }
+
+            OrderItemsDataGrid.ItemsSource = _orderItems; // Hiển thị các món trong DataGrid
         }
 
-        // Lấy danh sách đồ uống để hiển thị trong ComboBox
-        private void LoadDrinks()
+        // Tải tất cả đồ uống từ cơ sở dữ liệu
+        private void LoadAllDrinks()
         {
-            string query = "SELECT * FROM CafeItems"; // Lấy tất cả đồ uống từ bảng CafeItems
+            string query = "SELECT * FROM CafeItems"; // Giả sử tên bảng đồ uống là CafeItems
             using (var connection = new MySqlConnection(_connectionString))
             {
                 try
@@ -71,115 +108,121 @@ namespace cafeha.Views
                         {
                             while (reader.Read())
                             {
-                                var drink = new Drink
+                                _allDrinks.Add(new Drink
                                 {
-                                    ItemId = reader.GetInt32("ItemId"),
+                                    Id = reader.GetInt32("Id"),
                                     Name = reader.GetString("Name"),
                                     Price = reader.GetDecimal("Price"),
-                                    ImageUrl = reader.GetString("ImageUrl")
-                                };
-
-                                _drinks.Add(drink);
-                                DrinkComboBox.Items.Add(drink); // Thêm đồ uống vào ComboBox
+                                    ImageUrl = reader.IsDBNull(reader.GetOrdinal("ImageUrl")) ? null : reader.GetString("ImageUrl"),
+                                    Category = reader.IsDBNull(reader.GetOrdinal("Category")) ? null : reader.GetString("Category")
+                                });
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi khi tải dữ liệu đồ uống: " + ex.Message);
+                    MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message);
                 }
             }
+
+            AllDrinksListView.ItemsSource = _allDrinks; // Hiển thị danh sách nước uống bên phải
         }
 
-        // Sự kiện khi chọn đơn hàng từ ComboBox
-        private void OrderComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        // Thêm món vào đơn hàng
+        private void AddDrink_Click(object sender, RoutedEventArgs e)
         {
-            if (OrderComboBox.SelectedItem != null)
+            var selectedDrink = (Drink)AllDrinksListView.SelectedItem;
+            if (selectedDrink != null)
             {
-                _selectedOrder = (Order)OrderComboBox.SelectedItem;
-                QuantityTextBox.Text = _selectedOrder.Quantity.ToString();
-                TotalPriceTextBox.Text = _selectedOrder.TotalPrice.ToString("F2");
-
-                // Chọn đồ uống liên quan đến đơn hàng
-                DrinkComboBox.SelectedItem = _drinks.Find(d => d.ItemId == _selectedOrder.ItemId);
-            }
-        }
-
-        // Sự kiện khi nhấn nút "Lưu"
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Kiểm tra tính hợp lệ của dữ liệu
-            if (OrderComboBox.SelectedItem == null || string.IsNullOrEmpty(QuantityTextBox.Text) || DrinkComboBox.SelectedItem == null)
-            {
-                MessageBox.Show("Vui lòng chọn đơn hàng, chọn đồ uống và nhập số lượng.");
-                return;
-            }
-
-            try
-            {
-                var selectedOrder = _selectedOrder;
-                int orderId = selectedOrder.OrderId;
-                int quantity = int.Parse(QuantityTextBox.Text);
-                decimal totalPrice = selectedOrder.TotalPrice / selectedOrder.Quantity * quantity; // Tính lại tổng tiền
-                int itemId = ((Drink)DrinkComboBox.SelectedItem).ItemId; // Lấy ID món đồ uống đã chọn
-
-                // Cập nhật đơn hàng vào cơ sở dữ liệu
-                string query = "UPDATE Orders SET Quantity = @Quantity, TotalPrice = @TotalPrice, ItemId = @ItemId WHERE OrderId = @OrderId";
-                using (var connection = new MySqlConnection(_connectionString))
+                // Kiểm tra ItemId hợp lệ trước khi thêm vào OrderItems
+                if (selectedDrink.Id == 0)
                 {
-                    connection.Open();
-                    using (var command = new MySqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@OrderId", orderId);
-                        command.Parameters.AddWithValue("@Quantity", quantity);
-                        command.Parameters.AddWithValue("@TotalPrice", totalPrice);
-                        command.Parameters.AddWithValue("@ItemId", itemId);
-
-                        command.ExecuteNonQuery();
-                    }
+                    MessageBox.Show("Món không hợp lệ (ID không tồn tại)!");
+                    return; // Không thêm món vào nếu ItemId không hợp lệ
                 }
 
-                MessageBox.Show("Đơn hàng đã được cập nhật thành công.");
-                this.Close(); // Đóng cửa sổ sau khi lưu thành công
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Vui lòng nhập đúng định dạng số.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi cập nhật đơn hàng: " + ex.Message);
+                var existingItem = _orderItems.FirstOrDefault(item => item.ItemId == selectedDrink.Id);
+                if (existingItem != null)
+                {
+                    existingItem.Quantity++; // Nếu món đã có, tăng số lượng
+                    existingItem.TotalPrice = existingItem.Quantity * existingItem.DrinkPrice; // Cập nhật lại tổng tiền
+                }
+                else
+                {
+                    // Nếu món chưa có trong đơn, thêm mới vào đơn
+                    var newOrderItem = new OrderItem
+                    {
+                        ItemId = selectedDrink.Id, // Gán ItemId
+                        DrinkName = selectedDrink.Name,
+                        Quantity = 1,
+                        DrinkPrice = selectedDrink.Price,
+                        TotalPrice = selectedDrink.Price
+                    };
+                    _orderItems.Add(newOrderItem);
+                }
+
+                // Cập nhật lại DataGrid hiển thị các món trong đơn
+                OrderItemsDataGrid.ItemsSource = null;
+                OrderItemsDataGrid.ItemsSource = _orderItems;
             }
         }
-    }
 
-    // Lớp Order để chứa thông tin đơn hàng
-    public class Order
-    {
-        public int OrderId { get; set; }
-        public int ItemId { get; set; }
-        public int Quantity { get; set; }
-        public decimal TotalPrice { get; set; }
-        public DateTime OrderDate { get; set; }
-
-        public override string ToString()
+        // Xóa món khỏi đơn hàng
+        private void RemoveDrink_Click(object sender, RoutedEventArgs e)
         {
-            return $"Đơn hàng #{OrderId} - {Quantity} x {TotalPrice:F2}";
+            var selectedItem = (OrderItem)OrderItemsDataGrid.SelectedItem;
+            if (selectedItem != null)
+            {
+                if (selectedItem.Quantity > 1)
+                {
+                    // Nếu số lượng món đồ uống lớn hơn 1, chỉ giảm số lượng đi 1
+                    selectedItem.Quantity--;
+
+                    // Cập nhật lại tổng tiền cho món
+                    selectedItem.TotalPrice = selectedItem.Quantity * selectedItem.DrinkPrice;
+
+                    // Cập nhật lại DataGrid
+                    OrderItemsDataGrid.ItemsSource = null;
+                    OrderItemsDataGrid.ItemsSource = _orderItems;
+                }
+                else
+                {
+                    // Nếu số lượng món là 1, xóa món khỏi danh sách
+                    _orderItems.Remove(selectedItem);
+                }
+
+                // Tính lại tổng tiền đơn hàng
+                decimal totalPrice = 0;
+                foreach (var item in _orderItems)
+                {
+                    totalPrice += item.TotalPrice;
+                }
+                _order.TotalPrice = totalPrice;
+            }
         }
-    }
 
-    // Lớp Drink để chứa thông tin đồ uống
-    public class Drink
-    {
-        public int ItemId { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public string ImageUrl { get; set; }
 
-        public override string ToString()
+
+        // Lưu đơn hàng
+        private void SaveOrder_Click(object sender, RoutedEventArgs e)
         {
-            return Name;
+            decimal totalPrice = 0;
+            foreach (var item in _orderItems)
+            {
+                totalPrice += item.TotalPrice; // Tính lại tổng tiền
+            }
+            _order.TotalPrice = totalPrice;
+
+            // Mở cửa sổ xác nhận đơn hàng
+            ConfirmOrderWindow confirmOrderWindow = new ConfirmOrderWindow(_connectionString, _order, _orderItems);
+            confirmOrderWindow.ShowDialog();
+        }
+
+        // Hủy và đóng cửa sổ
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

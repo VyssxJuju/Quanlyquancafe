@@ -13,6 +13,12 @@
     <Compile Update="Views\AddOrderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AddStaffWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ConfirmOrderWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\DrinkManagementWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -20,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\EditOrderWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditStaffWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\LoginWindow.xaml.cs">
@@ -31,7 +40,10 @@
     <Compile Update="Views\OrderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\RegisterWindow.xaml.cs">
+    <Compile Update="Views\RevenueWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\StaffManagementWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -40,6 +52,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AddOrderWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddStaffWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ConfirmOrderWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DrinkManagementWindow.xaml">
@@ -51,7 +69,7 @@
     <Page Update="Views\EditOrderWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\images\EditDrinkWindow.xaml">
+    <Page Update="Views\EditStaffWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\LoginWindow.xaml">
@@ -63,7 +81,10 @@
     <Page Update="Views\OrderWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\RegisterWindow.xaml">
+    <Page Update="Views\RevenueWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\StaffManagementWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

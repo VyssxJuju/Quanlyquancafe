@@ -1,38 +1,44 @@
 ﻿<Window x:Class="cafeha.EditDrinkWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Chỉnh Sửa Đồ Uống" Height="546" Width="400">
+        Title="Chỉnh sửa đồ uống" Height="700" Width="400">
     <Grid Margin="20">
-        <!-- Cấu trúc lưới với 2 cột và 5 hàng -->
+        <!-- Định nghĩa các hàng trong Grid -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <!-- Dòng cho thông tin món -->
             <RowDefinition Height="Auto"/>
+            <!-- Dòng cho tên đồ uống -->
             <RowDefinition Height="Auto"/>
+            <!-- Dòng cho giá -->
             <RowDefinition Height="Auto"/>
+            <!-- Dòng cho danh mục -->
             <RowDefinition Height="Auto"/>
+            <!-- Dòng cho ảnh -->
+            <RowDefinition Height="Auto"/>
+            <!-- Dòng cho nút lưu -->
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
+        <TextBlock Name="DrinkInfoTextBlock" HorizontalAlignment="Center" VerticalAlignment="Top" 
+           Grid.Row="0" Margin="0,10,0,10" FontSize="16" FontWeight="Bold" TextAlignment="Center" 
+           Text="Sửa Đồ Uống"/>
 
-        <!-- Tên Đồ Uống -->
-        <StackPanel Orientation="Vertical" Grid.Row="0" Margin="0,10">
-            <TextBlock Text="Tên Đồ Uống" HorizontalAlignment="Left"/>
-            <TextBox x:Name="NameTextBox" Margin="0,5" Height="30" Text="{Binding Name}"/>
+        <!-- Tên đồ uống -->
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,10,0,0">
+            <TextBlock Text="Tên Đồ Uống" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox Name="NameTextBox" Height="30" FontSize="14" Margin="0,0,0,10"/>
         </StackPanel>
 
         <!-- Giá -->
-        <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0,10">
-            <TextBlock Text="Giá" HorizontalAlignment="Left"/>
-            <TextBox x:Name="PriceTextBox" Margin="0,5" Height="30" Text="{Binding Price}"/>
+        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="0,10,0,0">
+            <TextBlock Text="Giá" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox Name="PriceTextBox" Height="30" FontSize="14" Margin="0,0,0,10"/>
         </StackPanel>
 
-        <!-- Danh Mục -->
-        <StackPanel Orientation="Vertical" Grid.Row="2" Margin="0,10">
-            <TextBlock Text="Danh Mục" HorizontalAlignment="Left"/>
-            <ComboBox x:Name="CategoryComboBox" Margin="0,5" Height="30">
-                <!-- Các danh mục có sẵn có thể được gán từ code-behind hoặc database -->
+        <!-- Danh mục -->
+        <StackPanel Grid.Row="3" Orientation="Vertical" Margin="0,10,0,0">
+            <TextBlock Text="Danh Mục" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+            <ComboBox Name="CategoryComboBox" Height="30" FontSize="14" Margin="0,0,0,10">
                 <ComboBoxItem Content="Cà Phê"/>
                 <ComboBoxItem Content="Trà"/>
                 <ComboBoxItem Content="Sinh Tố"/>
@@ -40,14 +46,21 @@
             </ComboBox>
         </StackPanel>
 
-        <!-- Ảnh -->
-        <StackPanel Orientation="Vertical" Grid.Row="3" Margin="0,10">
-            <TextBlock Text="Ảnh" HorizontalAlignment="Left"/>
-            <Button Content="Chọn Ảnh" HorizontalAlignment="Left" Click="SelectImage_Click" Margin="0,5"/>
-            <TextBox x:Name="ImageUrlTextBox" Height="128" IsReadOnly="True" Width="194" Text="{Binding ImageUrl}"/>
+        <!-- Đường dẫn ảnh -->
+        <StackPanel Grid.Row="4" Orientation="Vertical" Margin="0,10,0,0">
+            <TextBlock Text="Ảnh" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+            <Button Content="Chọn Ảnh" Height="30" FontSize="14" Click="SelectImage_Click"/>
+            <TextBox x:Name="ImageUrlTextBox" Height="30" FontSize="14" IsReadOnly="True"/>
+
+            <!-- Khung cho ảnh -->
+            <Border BorderBrush="Gray" BorderThickness="1" Margin="0,10,0,10" Height="150" Width="200" HorizontalAlignment="Center">
+                <Image Name="DrinkImage" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
         </StackPanel>
 
-        <!-- Nút Lưu (Chỉnh sửa) -->
-        <Button Content="Lưu" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Margin="10,20,10,10" Width="100" Height="40" Click="SaveButton_Click"/>
+        <!-- Nút Lưu -->
+        <Button Content="Lưu" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                Width="120" Height="40" FontSize="16" FontWeight="Bold" Grid.Row="5" Margin="50,20,50,10" 
+                Click="SaveButton_Click"/>
     </Grid>
 </Window>

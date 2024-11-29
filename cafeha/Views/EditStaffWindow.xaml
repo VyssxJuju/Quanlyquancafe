@@ -1,0 +1,34 @@
+﻿<Window x:Class="cafeha.Views.EditStaffWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sửa Nhân Viên" Height="571" Width="400">
+    <Grid Margin="20">
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock Text="Tên nhân viên" Margin="5"/>
+            <TextBox x:Name="EmployeeNameTextBox" Margin="5" Width="250"/>
+
+            <TextBlock Text="Tài khoản" Margin="5"/>
+            <TextBox x:Name="UsernameTextBox" Margin="5" Width="250"/>
+
+            <TextBlock Text="Mật khẩu" Margin="5"/>
+            <PasswordBox x:Name="PasswordBox" Margin="5" Width="250"/>
+
+            <TextBlock Text="Số điện thoại" Margin="5"/>
+            <TextBox x:Name="PhoneNumberTextBox" Margin="5" Width="250"/>
+
+            <TextBlock Text="Chức vụ" Margin="5"/>
+            <TextBox x:Name="PositionTextBox" Margin="5" Width="250"/>
+
+            <TextBlock Text="Địa chỉ" Margin="5"/>
+            <TextBox x:Name="AddressTextBox" Margin="5" Width="250"/>
+
+            <TextBlock Text="Ngày sinh" Margin="5"/>
+            <DatePicker x:Name="DateOfBirthPicker" Margin="5" Width="250"/>
+
+            <TextBlock Text="Mức lương" Margin="5"/>
+            <TextBox x:Name="SalaryTextBox" Margin="5" Width="250"/>
+
+            <Button Content="Lưu thay đổi" Margin="10" Width="100" Click="EditButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,47 +1,74 @@
-﻿using System;
-using System.Windows;
-using System.Windows.Controls;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using MySql.Data.MySqlClient;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using System.Windows;
+using System.IO;
 
 namespace cafeha
 {
     public partial class EditDrinkWindow : Window
     {
         private string _connectionString = "Server=127.0.0.1; Database=cafehaaaaa; Uid=root; Pwd=;"; // Kết nối MySQL
-        private string _currentImageUrl; // Lưu đường dẫn ảnh hiện tại
-        private string _drinkName; // Tên đồ uống
-        private decimal _drinkPrice; // Giá đồ uống
-        private string _drinkCategory; // Danh mục đồ uống
+        private string _drinkName;
 
         public EditDrinkWindow(string name, decimal price, string imageUrl, string category)
         {
             InitializeComponent();
 
-            // Gán giá trị cho các thuộc tính khi cửa sổ mở
-            _drinkName = name;
-            _drinkPrice = price;
-            _currentImageUrl = imageUrl;
 
-            // Hiển thị thông tin lên form
+            // Hiển thị các thông tin cũ của đồ uống
             NameTextBox.Text = name;
             PriceTextBox.Text = price.ToString();
             ImageUrlTextBox.Text = imageUrl;
+            CategoryComboBox.SelectedItem = CategoryComboBox.Items.Cast<ComboBoxItem>()
+                                                        .FirstOrDefault(item => ((ComboBoxItem)item).Content.ToString() == category);
+
+            string fileUrl = $"file:///{imageUrl.Replace("\\", "/")}";
+            DrinkImage.Source = new BitmapImage(new Uri(fileUrl));
 
 
-            // Nếu CategoryComboBox chứa các mục, chọn mục phù hợp
-            foreach (ComboBoxItem item in CategoryComboBox.Items)
+
+
+            _drinkName = name; // Lưu tên của đồ uống để dùng khi cập nhật
+        }
+
+        // Lưu các thay đổi
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            string newName = NameTextBox.Text;
+            decimal newPrice = decimal.TryParse(PriceTextBox.Text, out decimal result) ? result : 0;
+            string newCategory = ((ComboBoxItem)CategoryComboBox.SelectedItem)?.Content.ToString();
+            string newImageUrl = ImageUrlTextBox.Text;
+
+            // Cập nhật thông tin đồ uống trong cơ sở dữ liệu
+            string query = "UPDATE CafeItems SET Name = @Name, Price = @Price, Category = @Category, ImageUrl = @ImageUrl WHERE Name = @OldName";
+            using (var connection = new MySqlConnection(_connectionString))
             {
-                if (item.Content.ToString() == category)
+                try
                 {
-                    CategoryComboBox.SelectedItem = item;
-                    break;
+                    connection.Open();
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", newName);
+                        command.Parameters.AddWithValue("@Price", newPrice);
+                        command.Parameters.AddWithValue("@Category", newCategory);
+                        command.Parameters.AddWithValue("@ImageUrl", newImageUrl);
+                        command.Parameters.AddWithValue("@OldName", _drinkName);
+                        command.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Đồ uống đã được cập nhật thành công.");
+                    this.Close(); // Đóng cửa sổ sau khi cập nhật
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi cập nhật đồ uống: " + ex.Message);
                 }
             }
         }
 
-
-        // Sự kiện khi nhấn "Chọn ảnh"
+        // Chọn ảnh mới
         private void SelectImage_Click(object sender, RoutedEventArgs e)
         {
             var openFileDialog = new OpenFileDialog
@@ -51,50 +78,15 @@ namespace cafeha
 
             if (openFileDialog.ShowDialog() == true)
             {
-                ImageUrlTextBox.Text = openFileDialog.FileName; // Lấy đường dẫn ảnh
-            }
-        }
+                string selectedFile = openFileDialog.FileName;
+                string fileName = Path.GetFileName(selectedFile); // Lấy tên tệp từ đường dẫn
 
-        // Sự kiện khi nhấn "Lưu" để lưu thông tin đồ uống
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Kiểm tra tính hợp lệ của dữ liệu
-            if (string.IsNullOrEmpty(NameTextBox.Text) || string.IsNullOrEmpty(PriceTextBox.Text) || string.IsNullOrEmpty(ImageUrlTextBox.Text) || string.IsNullOrEmpty(CategoryComboBox.Text))
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
-                return;
-            }
+                // Lưu tên tệp vào TextBox
+                ImageUrlTextBox.Text = fileName;
 
-            // Lấy dữ liệu từ các trường nhập liệu
-            string name = NameTextBox.Text;
-            decimal price = decimal.TryParse(PriceTextBox.Text, out decimal result) ? result : 0;
-            string imageUrl = ImageUrlTextBox.Text;
-            string category = CategoryComboBox.Text; // Lấy giá trị danh mục từ ComboBox
-
-            // Cập nhật thông tin đồ uống vào cơ sở dữ liệu
-            string query = "UPDATE CafeItems SET Name = @Name, Price = @Price, ImageUrl = @ImageUrl, Category = @Category WHERE Name = @OldName";
-            using (var connection = new MySqlConnection(_connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    using (var command = new MySqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Name", name);
-                        command.Parameters.AddWithValue("@Price", price);
-                        command.Parameters.AddWithValue("@ImageUrl", imageUrl);
-                        command.Parameters.AddWithValue("@Category", category); // Thêm tham số Category
-                        command.Parameters.AddWithValue("@OldName", _drinkName); // Sử dụng tên cũ để tìm đồ uống cần sửa
-                        command.ExecuteNonQuery();
-                    }
-
-                    MessageBox.Show("Đồ uống đã được cập nhật thành công.");
-                    this.Close(); // Đóng cửa sổ sau khi lưu thành công
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi khi cập nhật đồ uống: " + ex.Message);
-                }
+                // Hiển thị ảnh
+                Uri imageUri = new Uri($"file:///{selectedFile.Replace("\\", "/")}");
+                DrinkImage.Source = new BitmapImage(imageUri);
             }
         }
     }

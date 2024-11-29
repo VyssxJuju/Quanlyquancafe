@@ -24,8 +24,8 @@
             <TextBlock Text="Danh sách đồ uống" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
             <!-- Hiển thị danh sách đồ uống theo loại -->
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                <ItemsControl x:Name="DrinkList" Margin="10,40,10,10">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0,32,0,0">
+                <ItemsControl x:Name="DrinkList" Margin="10,10,10,10" Height="522">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <GroupBox Header="{Binding Name}">
@@ -34,6 +34,7 @@
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" Margin="5">
                                                 <CheckBox Checked="DrinkCheckbox_Checked" Unchecked="DrinkCheckbox_Unchecked" Tag="{Binding}"/>
+                                                <!-- Bind ImageSource để hiển thị ảnh -->
                                                 <Image Source="{Binding ImageUrl}" Width="50" Height="50" Margin="5"/>
                                                 <TextBlock Text="{Binding Name}" Margin="5" VerticalAlignment="Center"/>
                                                 <TextBlock Text="{Binding Price, StringFormat='{}{0:N0} VND'}" Margin="5" VerticalAlignment="Center"/>
@@ -45,6 +46,7 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
+
             </ScrollViewer>
 
             <!-- Nơi hiển thị các món đã chọn -->
@@ -57,15 +59,26 @@
             </ListBox>
 
             <Button Content="Tạo Đơn Hàng" Click="CreateOrder_Click" Margin="591,457,-134,2"/>
+
         </Grid>
 
         <!-- Bảng danh sách món đặc biệt -->
-        <StackPanel DockPanel.Dock="Bottom" Background="Wheat" Height="136">
-            <TextBlock Text="Món Đặc Biệt Hôm Nay" FontSize="18" FontWeight="Bold" Margin="10"/>
-            <ListBox x:Name="SpecialItemsList" Margin="10">
-                <ListBoxItem Content="Cafe Sữa Đá - 25k"/>
-                <ListBoxItem Content="Trà Sữa Trân Châu - 30k"/>
-                <ListBoxItem Content="Sinh Tố Xoài - 35k"/>
+        <StackPanel DockPanel.Dock="Bottom" Margin="10, 20, 10, 10">
+            <!-- Tiêu đề các món đặc biệt -->
+            <TextBlock Text="Các Món Đặc Biệt Của Quán" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <ListBox x:Name="SpecialItemsList" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <!-- Hiển thị tên món -->
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16" />
+
+                            <!-- Hiển thị giá với định dạng VND -->
+                            <TextBlock Text="{Binding Price, StringFormat={}{0:0.0} VND}" FontSize="14" Foreground="Gray"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
 

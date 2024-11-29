@@ -8,6 +8,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cafe-mama-ebb52-firebase-adminsdk-v270c-a9c1316cbb.json")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/images/cafe_den.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/images/cafe_lua_mach.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/images/cafe_sua_da.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/images/nuoc_ep_cam.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/images/nuoc_mia.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/images/sinh_to_dua.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/images/sinh_to_xoai.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/images/tra_dao.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/images/tra_sua_tran_chau.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/images/tra_xanh_mat_ong.jpg")]
 
 
