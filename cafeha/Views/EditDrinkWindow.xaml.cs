@@ -37,7 +37,14 @@ namespace cafeha
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             string newName = NameTextBox.Text;
-            decimal newPrice = decimal.TryParse(PriceTextBox.Text, out decimal result) ? result : 0;
+
+            // Kiểm tra giá nhập vào có hợp lệ hay không
+            if (!decimal.TryParse(PriceTextBox.Text, out decimal newPrice) || newPrice <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập giá hợp lệ.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                return; // Dừng lại nếu giá không hợp lệ
+            }
+
             string newCategory = ((ComboBoxItem)CategoryComboBox.SelectedItem)?.Content.ToString();
             string newImageUrl = ImageUrlTextBox.Text;
 
@@ -67,6 +74,7 @@ namespace cafeha
                 }
             }
         }
+
 
         // Chọn ảnh mới
         private void SelectImage_Click(object sender, RoutedEventArgs e)

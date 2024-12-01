@@ -190,6 +190,9 @@ namespace cafeha.Views
                 {
                     // Nếu số lượng món là 1, xóa món khỏi danh sách
                     _orderItems.Remove(selectedItem);
+                    OrderItemsDataGrid.ItemsSource = null;
+                    OrderItemsDataGrid.ItemsSource = _orderItems;
+
                 }
 
                 // Tính lại tổng tiền đơn hàng

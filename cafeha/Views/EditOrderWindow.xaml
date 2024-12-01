@@ -24,7 +24,7 @@
                 <DataGrid x:Name="OrderItemsDataGrid" AutoGenerateColumns="False" CanUserAddRows="False"
                           SelectionMode="Single" IsReadOnly="False" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Tên Nước" Binding="{Binding DrinkName}" IsReadOnly="True" Width="*" />
+                        <DataGridTextColumn Header="Tên Đồ uống" Binding="{Binding DrinkName}" IsReadOnly="True" Width="*" />
                         <DataGridTextColumn Header="Số Lượng" Binding="{Binding Quantity}" Width="100" />
                         <DataGridTextColumn Header="Đơn Giá (VND)" Binding="{Binding DrinkPrice, StringFormat={}{0:N0}}" Width="150" IsReadOnly="True" />
                         <DataGridTextColumn Header="Thành Tiền (VND)" Binding="{Binding TotalPrice, StringFormat={}{0:N0}}" Width="150" IsReadOnly="True" />
@@ -37,7 +37,7 @@
                 <ListView x:Name="AllDrinksListView" SelectionMode="Single">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Tên Nước" DisplayMemberBinding="{Binding Name}" Width="150" />
+                            <GridViewColumn Header="Tên Đồ Uống" DisplayMemberBinding="{Binding Name}" Width="150" />
                             <GridViewColumn Header="Giá (VND)" DisplayMemberBinding="{Binding Price, StringFormat={}{0:N0}}" Width="100" />
                         </GridView>
                     </ListView.View>
@@ -47,8 +47,8 @@
 
         <!-- Nút hành động -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
-            <Button Content="Thêm Nước" Click="AddDrink_Click" Margin="5" Width="100" />
-            <Button Content="Xóa Món" Click="RemoveDrink_Click" Margin="5" Width="100" />
+            <Button Content="Thêm Đồ Uống" Click="AddDrink_Click" Margin="5" Width="100" />
+            <Button Content="Xóa Đồ Uống" Click="RemoveDrink_Click" Margin="5" Width="100" />
             <Button Content="Lưu" Click="SaveOrder_Click" Margin="5" Width="100" />
             <Button Content="Hủy" Click="Cancel_Click" Margin="5" Width="100" />
         </StackPanel>

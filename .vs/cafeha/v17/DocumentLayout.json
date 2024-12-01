@@ -3,44 +3,76 @@
   "WorkspaceRootPath": "D:\\code\\btl_quanlyquancafe\\cafeha\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\editdrinkwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editdrinkwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\editstaffwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editstaffwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\drinkmanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\drinkmanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\addstaffwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\addstaffwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\revenuewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\revenuewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\revenuewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\revenuewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\drinkmanagementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\drinkmanagementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\adddrinkwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\adddrinkwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\editorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\addorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\addorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\editdrinkwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editdrinkwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\addorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\addorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\editdrinkwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editdrinkwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\adddrinkwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\adddrinkwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\editorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\orderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\orderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\drinkmanagementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\drinkmanagementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\drinkmanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\drinkmanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\adddrinkwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\adddrinkwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\editdrinkwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editdrinkwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\model\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\editorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hadin\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -70,52 +98,24 @@
       "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editstaffwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\editstaffwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editstaffwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\addstaffwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\addstaffwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\editorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\editorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\addorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\addorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\orderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\orderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\revenuewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\revenuewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\confirmorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\confirmorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\revenuewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\revenuewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\confirmorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\confirmorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\orderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\orderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\views\\addstaffwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|solutionrelative:cafeha\\views\\addstaffwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15A9EB57-5C6D-46D2-9E97-38961C0C7DE7}|cafeha\\cafeha.csproj|d:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\controller\\mysqlservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -133,244 +133,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "cafeha\\Views\\LoginWindow.xaml.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "cafeha\\Views\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T19:23:57.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DrinkManagementWindow.xaml.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\DrinkManagementWindow.xaml.cs",
-              "RelativeDocumentMoniker": "cafeha\\Views\\DrinkManagementWindow.xaml.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\DrinkManagementWindow.xaml.cs",
-              "RelativeToolTip": "cafeha\\Views\\DrinkManagementWindow.xaml.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAQwJoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T20:06:07.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "AddOrderWindow.xaml.cs",
               "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddOrderWindow.xaml.cs",
               "RelativeDocumentMoniker": "cafeha\\Views\\AddOrderWindow.xaml.cs",
               "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddOrderWindow.xaml.cs",
               "RelativeToolTip": "cafeha\\Views\\AddOrderWindow.xaml.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAIwDgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAUwLMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T21:04:32.413Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "cafeha\\Views\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\MainWindow.xaml.cs",
-              "RelativeToolTip": "cafeha\\Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAuwBMBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T19:25:45.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DrinkManagementWindow.xaml",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\DrinkManagementWindow.xaml",
-              "RelativeDocumentMoniker": "cafeha\\Views\\DrinkManagementWindow.xaml",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\DrinkManagementWindow.xaml",
-              "RelativeToolTip": "cafeha\\Views\\DrinkManagementWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-28T20:04:47.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "cafeha\\Views\\MainWindow.xaml",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "cafeha\\Views\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-28T19:26:59.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AddDrinkWindow.xaml",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddDrinkWindow.xaml",
-              "RelativeDocumentMoniker": "cafeha\\Views\\AddDrinkWindow.xaml",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddDrinkWindow.xaml",
-              "RelativeToolTip": "cafeha\\Views\\AddDrinkWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-28T20:06:48.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EditDrinkWindow.xaml.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditDrinkWindow.xaml.cs",
-              "RelativeDocumentMoniker": "cafeha\\Views\\EditDrinkWindow.xaml.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditDrinkWindow.xaml.cs",
-              "RelativeToolTip": "cafeha\\Views\\EditDrinkWindow.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA6wB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T20:25:41.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AddDrinkWindow.xaml.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddDrinkWindow.xaml.cs",
-              "RelativeDocumentMoniker": "cafeha\\Views\\AddDrinkWindow.xaml.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddDrinkWindow.xaml.cs",
-              "RelativeToolTip": "cafeha\\Views\\AddDrinkWindow.xaml.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAQwFEAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T20:23:04.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EditDrinkWindow.xaml",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditDrinkWindow.xaml",
-              "RelativeDocumentMoniker": "cafeha\\Views\\EditDrinkWindow.xaml",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditDrinkWindow.xaml",
-              "RelativeToolTip": "cafeha\\Views\\EditDrinkWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-29T20:45:17.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Model\\Employee.cs",
-              "RelativeDocumentMoniker": "cafeha\\Model\\Employee.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Model\\Employee.cs",
-              "RelativeToolTip": "cafeha\\Model\\Employee.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T10:26:03.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Model\\OrderItem.cs",
-              "RelativeDocumentMoniker": "cafeha\\Model\\OrderItem.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Model\\OrderItem.cs",
-              "RelativeToolTip": "cafeha\\Model\\OrderItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:26:02.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EditOrderWindow.xaml",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditOrderWindow.xaml",
-              "RelativeDocumentMoniker": "cafeha\\Views\\EditOrderWindow.xaml",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditOrderWindow.xaml",
-              "RelativeToolTip": "cafeha\\Views\\EditOrderWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-29T15:30:51.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "StaffManagementWindow.xaml.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\StaffManagementWindow.xaml.cs",
-              "RelativeDocumentMoniker": "cafeha\\Views\\StaffManagementWindow.xaml.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\StaffManagementWindow.xaml.cs",
-              "RelativeToolTip": "cafeha\\Views\\StaffManagementWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T10:28:58.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AddStaffWindow.xaml",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddStaffWindow.xaml",
-              "RelativeDocumentMoniker": "cafeha\\Views\\AddStaffWindow.xaml",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddStaffWindow.xaml",
-              "RelativeToolTip": "cafeha\\Views\\AddStaffWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-29T10:31:33.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EditStaffWindow.xaml",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditStaffWindow.xaml",
-              "RelativeDocumentMoniker": "cafeha\\Views\\EditStaffWindow.xaml",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditStaffWindow.xaml",
-              "RelativeToolTip": "cafeha\\Views\\EditStaffWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-29T10:32:21.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EditStaffWindow.xaml.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditStaffWindow.xaml.cs",
-              "RelativeDocumentMoniker": "cafeha\\Views\\EditStaffWindow.xaml.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditStaffWindow.xaml.cs",
-              "RelativeToolTip": "cafeha\\Views\\EditStaffWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T10:33:13.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PropertyPathWorker.cs",
-              "DocumentMoniker": "C:\\Users\\hadin\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
-              "ToolTip": "C:\\Users\\hadin\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs [Read Only]",
-              "ViewState": "AgIAAKIEAAAAAAAAAAAAALIEAAAEAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T19:05:35.959Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "StaffManagementWindow.xaml",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\StaffManagementWindow.xaml",
-              "RelativeDocumentMoniker": "cafeha\\Views\\StaffManagementWindow.xaml",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\StaffManagementWindow.xaml",
-              "RelativeToolTip": "cafeha\\Views\\StaffManagementWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-29T10:15:22.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
               "Title": "AddOrderWindow.xaml",
               "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddOrderWindow.xaml",
               "RelativeDocumentMoniker": "cafeha\\Views\\AddOrderWindow.xaml",
@@ -382,33 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "EditOrderWindow.xaml.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditOrderWindow.xaml.cs",
-              "RelativeDocumentMoniker": "cafeha\\Views\\EditOrderWindow.xaml.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditOrderWindow.xaml.cs",
-              "RelativeToolTip": "cafeha\\Views\\EditOrderWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T21:14:41.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "OrderWindow.xaml.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\OrderWindow.xaml.cs",
-              "RelativeDocumentMoniker": "cafeha\\Views\\OrderWindow.xaml.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\OrderWindow.xaml.cs",
-              "RelativeToolTip": "cafeha\\Views\\OrderWindow.xaml.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAIwG0AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T21:03:53.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 3,
               "Title": "RevenueWindow.xaml",
               "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\RevenueWindow.xaml",
               "RelativeDocumentMoniker": "cafeha\\Views\\RevenueWindow.xaml",
@@ -420,20 +170,279 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 2,
               "Title": "RevenueWindow.xaml.cs",
               "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\RevenueWindow.xaml.cs",
               "RelativeDocumentMoniker": "cafeha\\Views\\RevenueWindow.xaml.cs",
               "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\RevenueWindow.xaml.cs",
               "RelativeToolTip": "cafeha\\Views\\RevenueWindow.xaml.cs",
-              "ViewState": "AgIAAJcAAAAAAAAAAAAcwLUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAtwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T09:58:29.524Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddDrinkWindow.xaml.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddDrinkWindow.xaml.cs",
+              "RelativeDocumentMoniker": "cafeha\\Views\\AddDrinkWindow.xaml.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddDrinkWindow.xaml.cs",
+              "RelativeToolTip": "cafeha\\Views\\AddDrinkWindow.xaml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T20:23:04.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditDrinkWindow.xaml.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditDrinkWindow.xaml.cs",
+              "RelativeDocumentMoniker": "cafeha\\Views\\EditDrinkWindow.xaml.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditDrinkWindow.xaml.cs",
+              "RelativeToolTip": "cafeha\\Views\\EditDrinkWindow.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA5wBsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T20:25:41.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddStaffWindow.xaml.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddStaffWindow.xaml.cs",
+              "RelativeDocumentMoniker": "cafeha\\Views\\AddStaffWindow.xaml.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddStaffWindow.xaml.cs",
+              "RelativeToolTip": "cafeha\\Views\\AddStaffWindow.xaml.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAwwLwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:31:56.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditStaffWindow.xaml.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditStaffWindow.xaml.cs",
+              "RelativeDocumentMoniker": "cafeha\\Views\\EditStaffWindow.xaml.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditStaffWindow.xaml.cs",
+              "RelativeToolTip": "cafeha\\Views\\EditStaffWindow.xaml.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAQwG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:33:13.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderWindow.xaml",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\OrderWindow.xaml",
+              "RelativeDocumentMoniker": "cafeha\\Views\\OrderWindow.xaml",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\OrderWindow.xaml",
+              "RelativeToolTip": "cafeha\\Views\\OrderWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-28T21:03:31.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditOrderWindow.xaml.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditOrderWindow.xaml.cs",
+              "RelativeDocumentMoniker": "cafeha\\Views\\EditOrderWindow.xaml.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditOrderWindow.xaml.cs",
+              "RelativeToolTip": "cafeha\\Views\\EditOrderWindow.xaml.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAADwv+cAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T21:14:41.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EditOrderWindow.xaml",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditOrderWindow.xaml",
+              "RelativeDocumentMoniker": "cafeha\\Views\\EditOrderWindow.xaml",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditOrderWindow.xaml",
+              "RelativeToolTip": "cafeha\\Views\\EditOrderWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-29T15:30:51.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AddDrinkWindow.xaml",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddDrinkWindow.xaml",
+              "RelativeDocumentMoniker": "cafeha\\Views\\AddDrinkWindow.xaml",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddDrinkWindow.xaml",
+              "RelativeToolTip": "cafeha\\Views\\AddDrinkWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-28T20:06:48.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "cafeha\\Views\\MainWindow.xaml",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "cafeha\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-28T19:26:59.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DrinkManagementWindow.xaml",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\DrinkManagementWindow.xaml",
+              "RelativeDocumentMoniker": "cafeha\\Views\\DrinkManagementWindow.xaml",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\DrinkManagementWindow.xaml",
+              "RelativeToolTip": "cafeha\\Views\\DrinkManagementWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-28T20:04:47.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DrinkManagementWindow.xaml.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\DrinkManagementWindow.xaml.cs",
+              "RelativeDocumentMoniker": "cafeha\\Views\\DrinkManagementWindow.xaml.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\DrinkManagementWindow.xaml.cs",
+              "RelativeToolTip": "cafeha\\Views\\DrinkManagementWindow.xaml.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAQwJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T20:06:07.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "cafeha\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "cafeha\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAP4AAAAAAAAAAAAuwBMBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T19:25:45.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "cafeha\\Views\\LoginWindow.xaml.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "cafeha\\Views\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T19:23:57.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EditDrinkWindow.xaml",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditDrinkWindow.xaml",
+              "RelativeDocumentMoniker": "cafeha\\Views\\EditDrinkWindow.xaml",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditDrinkWindow.xaml",
+              "RelativeToolTip": "cafeha\\Views\\EditDrinkWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-29T20:45:17.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Model\\Employee.cs",
+              "RelativeDocumentMoniker": "cafeha\\Model\\Employee.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Model\\Employee.cs",
+              "RelativeToolTip": "cafeha\\Model\\Employee.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:26:03.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Model\\OrderItem.cs",
+              "RelativeDocumentMoniker": "cafeha\\Model\\OrderItem.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Model\\OrderItem.cs",
+              "RelativeToolTip": "cafeha\\Model\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T14:26:02.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "StaffManagementWindow.xaml.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\StaffManagementWindow.xaml.cs",
+              "RelativeDocumentMoniker": "cafeha\\Views\\StaffManagementWindow.xaml.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\StaffManagementWindow.xaml.cs",
+              "RelativeToolTip": "cafeha\\Views\\StaffManagementWindow.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T10:28:58.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AddStaffWindow.xaml",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddStaffWindow.xaml",
+              "RelativeDocumentMoniker": "cafeha\\Views\\AddStaffWindow.xaml",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddStaffWindow.xaml",
+              "RelativeToolTip": "cafeha\\Views\\AddStaffWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-29T10:31:33.641Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 23,
+              "Title": "EditStaffWindow.xaml",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditStaffWindow.xaml",
+              "RelativeDocumentMoniker": "cafeha\\Views\\EditStaffWindow.xaml",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\EditStaffWindow.xaml",
+              "RelativeToolTip": "cafeha\\Views\\EditStaffWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-29T10:32:21.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PropertyPathWorker.cs",
+              "DocumentMoniker": "C:\\Users\\hadin\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
+              "ToolTip": "C:\\Users\\hadin\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs [Read Only]",
+              "ViewState": "AgIAAKIEAAAAAAAAAAAAALIEAAAEAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T19:05:35.959Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "StaffManagementWindow.xaml",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\StaffManagementWindow.xaml",
+              "RelativeDocumentMoniker": "cafeha\\Views\\StaffManagementWindow.xaml",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\StaffManagementWindow.xaml",
+              "RelativeToolTip": "cafeha\\Views\\StaffManagementWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-29T10:15:22.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrderWindow.xaml.cs",
+              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\OrderWindow.xaml.cs",
+              "RelativeDocumentMoniker": "cafeha\\Views\\OrderWindow.xaml.cs",
+              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\OrderWindow.xaml.cs",
+              "RelativeToolTip": "cafeha\\Views\\OrderWindow.xaml.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAIwG0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T21:03:53.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "ConfirmOrderWindow.xaml.cs",
               "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\ConfirmOrderWindow.xaml.cs",
               "RelativeDocumentMoniker": "cafeha\\Views\\ConfirmOrderWindow.xaml.cs",
@@ -441,57 +450,29 @@
               "RelativeToolTip": "cafeha\\Views\\ConfirmOrderWindow.xaml.cs",
               "ViewState": "AgIAAJ0AAAAAAAAAAAAcwLEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T16:03:39.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T16:03:39.774Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "OrderWindow.xaml",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\OrderWindow.xaml",
-              "RelativeDocumentMoniker": "cafeha\\Views\\OrderWindow.xaml",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\OrderWindow.xaml",
-              "RelativeToolTip": "cafeha\\Views\\OrderWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-28T21:03:31.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "ConfirmOrderWindow.xaml",
               "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\ConfirmOrderWindow.xaml",
               "RelativeDocumentMoniker": "cafeha\\Views\\ConfirmOrderWindow.xaml",
               "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\ConfirmOrderWindow.xaml",
               "RelativeToolTip": "cafeha\\Views\\ConfirmOrderWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-29T16:00:14.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T16:00:14.628Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "cafeha\\Views\\LoginWindow.xaml",
               "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\LoginWindow.xaml",
               "RelativeToolTip": "cafeha\\Views\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-29T10:56:18.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "AddStaffWindow.xaml.cs",
-              "DocumentMoniker": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddStaffWindow.xaml.cs",
-              "RelativeDocumentMoniker": "cafeha\\Views\\AddStaffWindow.xaml.cs",
-              "ToolTip": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\Views\\AddStaffWindow.xaml.cs",
-              "RelativeToolTip": "cafeha\\Views\\AddStaffWindow.xaml.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAAALIAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T10:31:56.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T10:56:18.854Z"
             },
             {
               "$type": "Document",

@@ -24,10 +24,6 @@
         </StackPanel>
 
         <!-- Doanh thu tuần này -->
-        <StackPanel Orientation="Vertical" Grid.Row="2" Margin="0,10">
-            <TextBlock Text="Doanh thu tuần này:" Margin="0,0,0,5"/>
-            <TextBlock x:Name="RevenueWeekTextBlock" FontSize="16" FontWeight="Bold" Foreground="Blue"/>
-        </StackPanel>
 
         <!-- Doanh thu tháng này -->
         <StackPanel Orientation="Vertical" Grid.Row="3" Margin="0,10">

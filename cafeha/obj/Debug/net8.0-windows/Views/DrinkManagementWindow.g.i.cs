@@ -60,7 +60,7 @@ namespace cafeha {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/cafeha;component/views/drinkmanagementwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/cafeha;V1.0.0.0;component/views/drinkmanagementwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\DrinkManagementWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

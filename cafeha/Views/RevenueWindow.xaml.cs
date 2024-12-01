@@ -31,13 +31,11 @@ namespace cafeha.Views
 
             // Lấy doanh thu từ các khoảng thời gian khác nhau
             var revenueToday = GetRevenueForToday();
-            var revenueWeek = GetRevenueForThisWeek();
             var revenueMonth = GetRevenueForThisMonth();
             var revenueData = GetRevenueByMonth(StartDate.Value);
 
             // Cập nhật UI
             RevenueTodayTextBlock.Text = $"Doanh thu hôm nay: {revenueToday.ToString("N0")} VND";
-            RevenueWeekTextBlock.Text = $"Doanh thu tuần này: {revenueWeek.ToString("N0")} VND";
             RevenueMonthTextBlock.Text = $"Doanh thu tháng này: {revenueMonth.ToString("N0")} VND";
 
             // Hiển thị doanh thu theo tháng
@@ -66,33 +64,6 @@ namespace cafeha.Views
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi khi lấy doanh thu hôm nay: " + ex.Message);
-                    return 0m;
-                }
-            }
-        }
-
-        // Lấy doanh thu của tuần này
-        private decimal GetRevenueForThisWeek()
-        {
-            var startOfWeek = DateTime.Now.AddDays(-(int)DateTime.Now.DayOfWeek); // Chủ nhật
-            string query = "SELECT SUM(TotalPrice) FROM Orders WHERE OrderDate >= @StartOfWeek";
-
-            using (var connection = new MySqlConnection(_connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    using (var command = new MySqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@StartOfWeek", startOfWeek);
-
-                        var result = command.ExecuteScalar();
-                        return result != DBNull.Value ? Convert.ToDecimal(result) : 0m;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi khi lấy doanh thu tuần này: " + ex.Message);
                     return 0m;
                 }
             }

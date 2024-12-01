@@ -58,10 +58,60 @@ namespace cafeha
         private void AddDrink_Click(object sender, RoutedEventArgs e)
         {
             // Lấy dữ liệu từ các trường nhập liệu
-            string name = NameTextBox.Text;
-            decimal price = decimal.TryParse(PriceTextBox.Text, out decimal result) ? result : 0;
-            string category = CategoryComboBox.Text;
-            string imageUrl = ImageUrlTextBox.Text;
+            string name = NameTextBox.Text.Trim();
+            string priceText = PriceTextBox.Text.Trim();
+            string category = CategoryComboBox.Text.Trim();
+            string imageUrl = ImageUrlTextBox.Text.Trim();
+
+            // Kiểm tra dữ liệu đầu vào
+            if (string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show("Vui lòng nhập tên đồ uống.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(priceText) || !decimal.TryParse(priceText, out decimal price) || price <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập giá hợp lệ (số lớn hơn 0).", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(category))
+            {
+                MessageBox.Show("Vui lòng chọn danh mục.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(imageUrl))
+            {
+                MessageBox.Show("Vui lòng chọn ảnh cho đồ uống.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Kiểm tra tên đồ uống có bị trùng không
+            string checkQuery = "SELECT COUNT(*) FROM CafeItems WHERE Name = @Name";
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (var checkCommand = new MySqlCommand(checkQuery, connection))
+                    {
+                        checkCommand.Parameters.AddWithValue("@Name", name);
+                        int count = Convert.ToInt32(checkCommand.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Tên đồ uống đã tồn tại. Vui lòng chọn tên khác.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                            return;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi kiểm tra dữ liệu: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            }
 
             // Thêm đồ uống vào cơ sở dữ liệu
             string query = "INSERT INTO CafeItems (Name, Price, Category, ImageUrl) VALUES (@Name, @Price, @Category, @ImageUrl)";
@@ -75,18 +125,19 @@ namespace cafeha
                         command.Parameters.AddWithValue("@Name", name);
                         command.Parameters.AddWithValue("@Price", price);
                         command.Parameters.AddWithValue("@Category", category);
-                        command.Parameters.AddWithValue("@ImageUrl", imageUrl); // Chỉ lưu tên tệp vào CSDL
+                        command.Parameters.AddWithValue("@ImageUrl", imageUrl);
                         command.ExecuteNonQuery();
                     }
 
-                    MessageBox.Show("Đồ uống đã được thêm thành công.");
+                    MessageBox.Show("Đồ uống đã được thêm thành công.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
                     this.Close(); // Đóng cửa sổ sau khi lưu thành công
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi khi thêm đồ uống: " + ex.Message);
+                    MessageBox.Show("Lỗi khi thêm đồ uống: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
+
     }
 }

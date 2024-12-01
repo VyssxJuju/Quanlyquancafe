@@ -5,15 +5,15 @@ using System.Windows;
 using cafeha.Model;
 using cafeha.Models;
 using MySql.Data.MySqlClient;
-
+using System.Collections.ObjectModel;
+    
 namespace cafeha.Views
 {
     public partial class AddOrderWindow : Window
     {
         private string _connectionString = "Server=127.0.0.1; Database=cafehaaaaa; Uid=root; Pwd=;";
-        private List<OrderItem> _orderItems = new List<OrderItem>();
+        private ObservableCollection<OrderItem> _orderItems = new ObservableCollection<OrderItem>();
         private List<Drink> _allDrinks = new List<Drink>(); // Danh sách tất cả các đồ uống
-
         public AddOrderWindow()
         {
             InitializeComponent();
@@ -93,40 +93,30 @@ namespace cafeha.Views
                 OrderItemsDataGrid.ItemsSource = _orderItems;
             }
         }
-
-
         // Xóa món khỏi đơn hàng
         private void RemoveDrink_Click(object sender, RoutedEventArgs e)
         {
             var selectedItem = (OrderItem)OrderItemsDataGrid.SelectedItem;
             if (selectedItem != null)
             {
-                if (selectedItem.Quantity > 1)
-                {
-                    // Nếu số lượng món đồ uống lớn hơn 1, chỉ giảm số lượng đi 1
-                    selectedItem.Quantity--;
+                // Nếu số lượng món đồ uống là 1 hoặc 2, xóa món khỏi danh sách
+                _orderItems.Remove(selectedItem);
 
-                    // Cập nhật lại tổng tiền cho món
-                    selectedItem.TotalPrice = selectedItem.Quantity * selectedItem.DrinkPrice;
+                // Cập nhật lại DataGrid hiển thị danh sách đơn hàng
+                OrderItemsDataGrid.ItemsSource = null;
+                OrderItemsDataGrid.ItemsSource = _orderItems;
 
-                    // Cập nhật lại DataGrid
-                    OrderItemsDataGrid.ItemsSource = null;
-                    OrderItemsDataGrid.ItemsSource = _orderItems;
-                }
-                else
-                {
-                    // Nếu số lượng món là 1, xóa món khỏi danh sách
-                    _orderItems.Remove(selectedItem);
-                }
-
-                // Tính lại tổng tiền đơn hàng
-                decimal totalPrice = 0;
-                foreach (var item in _orderItems)
-                {
-                    totalPrice += item.TotalPrice;
-                }
+                // Tính lại tổng tiền đơn hàng và hiển thị (nếu cần)
+                decimal totalPrice = _orderItems.Sum(item => item.TotalPrice);
+                // Hiển thị tổng tiền (nếu có giao diện tương ứng, ví dụ: TotalPriceLabel.Content = totalPrice.ToString("C"));
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn món cần xóa!");
             }
         }
+
+
 
         // Lưu đơn hàng vào cơ sở dữ liệu
         private void SaveOrder_Click(object sender, RoutedEventArgs e)
