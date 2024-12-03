@@ -13,7 +13,7 @@ namespace cafeha
 {
     public partial class MainWindow : Window
     {
-        private string _connectionString = "Server=127.0.0.1; Database=cafehaaaaa; Uid=root; Pwd=;"; // Kết nối với MySQL
+        private string _connectionString = "Server=127.0.0.1; Database=cafehaaaaa; Uid=root; Pwd=;";
         private List<DrinkCategory> _drinkCategories = new List<DrinkCategory>();
         private List<Drink> _selectedDrinks = new List<Drink>();
         private string _userRole;
@@ -21,17 +21,17 @@ namespace cafeha
         public MainWindow(string role)
         {
             InitializeComponent();
-            _userRole = role;  // Lưu vai trò người dùng
+            _userRole = role;
             LoadDrinkMenu();
             LoadSpecialItems();
-            SetupUIForRole(_userRole);  // Thiết lập quyền truy cập dựa trên vai trò
+            SetupUIForRole(_userRole);
         }
 
         // Tải danh sách đồ uống từ cơ sở dữ liệu
         private void LoadDrinkMenu()
         {
             var drinks = new ObservableCollection<DrinkCategory>();
-            string query = "SELECT Id, Category, Name, Price, ImageUrl FROM CafeItems";  // Truy vấn lấy ID, danh mục, tên, giá và đường dẫn ảnh
+            string query = "SELECT Id, Category, Name, Price, ImageUrl FROM CafeItems"; // Lấy tất cả đồ uống từ cơ sở dữ liệu
 
             using (var connection = new MySqlConnection(_connectionString))
             {
@@ -52,6 +52,7 @@ namespace cafeha
                                 decimal price = reader.GetDecimal("Price");
                                 string imageUrl = reader.GetString("ImageUrl");
 
+                                // Kiểm tra nếu danh mục đã tồn tại trong dictionary, nếu chưa thì tạo mới
                                 if (!categories.ContainsKey(category))
                                 {
                                     categories[category] = new DrinkCategory
@@ -61,6 +62,7 @@ namespace cafeha
                                     };
                                 }
 
+                                // Thêm món đồ uống vào danh mục tương ứng
                                 categories[category].Items.Add(new Drink
                                 {
                                     ItemId = id,
@@ -71,12 +73,13 @@ namespace cafeha
                                 });
                             }
 
-                            // Gán danh sách các danh mục đồ uống vào ItemsControl
+                            // Chuyển danh sách các danh mục đồ uống thành ObservableCollection
                             drinks = new ObservableCollection<DrinkCategory>(categories.Values);
                         }
                     }
 
-                    DrinkList.ItemsSource = drinks;  // Gán danh sách các danh mục vào ItemsControl
+                    // Hiển thị danh sách các danh mục đồ uống trong ItemsControl
+                    DrinkList.ItemsSource = drinks;
                 }
                 catch (Exception ex)
                 {
@@ -84,6 +87,7 @@ namespace cafeha
                 }
             }
         }
+
 
         // Tải các món đặc biệt
         private void LoadSpecialItems()

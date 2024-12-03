@@ -32,15 +32,16 @@ namespace cafeha.Views
             // Lấy doanh thu từ các khoảng thời gian khác nhau
             var revenueToday = GetRevenueForToday();
             var revenueMonth = GetRevenueForThisMonth();
-            var revenueData = GetRevenueByMonth(StartDate.Value);
+            var previousMonthsRevenue = GetRevenueForPreviousMonths(StartDate.Value);
 
             // Cập nhật UI
             RevenueTodayTextBlock.Text = $"Doanh thu hôm nay: {revenueToday.ToString("N0")} VND";
             RevenueMonthTextBlock.Text = $"Doanh thu tháng này: {revenueMonth.ToString("N0")} VND";
 
-            // Hiển thị doanh thu theo tháng
-            RevenueDataGrid.ItemsSource = revenueData;
+            // Hiển thị doanh thu của các tháng trước
+            PreviousMonthsRevenueDataGrid.ItemsSource = previousMonthsRevenue;
         }
+
 
         // Lấy doanh thu của ngày hôm nay
         private decimal GetRevenueForToday()
@@ -96,18 +97,17 @@ namespace cafeha.Views
             }
         }
 
-        // Lấy doanh thu theo từng tháng từ ngày bắt đầu
-        private List<RevenueInfo> GetRevenueByMonth(DateTime startDate)
+        private List<RevenueInfo> GetRevenueForPreviousMonths(DateTime startDate)
         {
             var revenueData = new List<RevenueInfo>();
             string query = @"
-                SELECT 
-                    DATE_FORMAT(OrderDate, '%Y-%m') AS MonthYear, 
-                    SUM(TotalPrice) AS Revenue
-                FROM Orders 
-                WHERE OrderDate >= @StartDate
-                GROUP BY MonthYear
-                ORDER BY MonthYear DESC";
+    SELECT 
+        DATE_FORMAT(OrderDate, '%Y-%m') AS MonthYear, 
+        SUM(TotalPrice) AS Revenue
+    FROM Orders 
+    WHERE OrderDate < @StartDate
+    GROUP BY MonthYear
+    ORDER BY MonthYear DESC";
 
             using (var connection = new MySqlConnection(_connectionString))
             {
@@ -124,8 +124,8 @@ namespace cafeha.Views
                             {
                                 var revenueInfo = new RevenueInfo
                                 {
-                                    TimePeriod = reader.GetString("MonthYear"), // Tháng và năm
-                                    Revenue = reader.GetDecimal("Revenue") // Doanh thu
+                                    TimePeriod = reader.GetString("MonthYear"), // Formatted as 'YYYY-MM'
+                                    Revenue = reader.GetDecimal("Revenue") // Total revenue for that month
                                 };
 
                                 revenueData.Add(revenueInfo);
@@ -135,18 +135,19 @@ namespace cafeha.Views
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi khi lấy doanh thu: " + ex.Message);
+                    MessageBox.Show("Lỗi khi lấy doanh thu các tháng trước: " + ex.Message);
                 }
             }
 
             return revenueData;
         }
-    }
 
-    // Lớp để chứa thông tin doanh thu
-    public class RevenueInfo
-    {
-        public string TimePeriod { get; set; }  // Tháng và năm
-        public decimal Revenue { get; set; }    // Doanh thu
+
+        // Lớp để chứa thông tin doanh thu
+        public class RevenueInfo
+        {
+            public string TimePeriod { get; set; }  // Tháng và năm
+            public decimal Revenue { get; set; }    // Doanh thu
+        }
     }
 }

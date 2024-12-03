@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\code\btl_quanlyquancafe\cafeha\cafeha\obj\Debug\net8.0-windows\
+D:\CODE\btl_quanlyquancafe\cafeha\cafeha\obj\Debug\net8.0-windows\
 cafeha
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\code\btl_quanlyquancafe\cafeha\cafeha\App.xaml
+D:\CODE\btl_quanlyquancafe\cafeha\cafeha\App.xaml
 13-358459345
-101182535954
+281026577260
 25408426768
-206-574852764
+206-1897545107
 Views\AddDrinkWindow.xaml;Views\AddOrderWindow.xaml;Views\AddStaffWindow.xaml;Views\ConfirmOrderWindow.xaml;Views\DrinkManagementWindow.xaml;Views\EditDrinkWindow.xaml;Views\EditOrderWindow.xaml;Views\EditStaffWindow.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\OrderWindow.xaml;Views\RevenueWindow.xaml;Views\StaffManagementWindow.xaml;
 
 False

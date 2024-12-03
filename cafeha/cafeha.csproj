@@ -11,8 +11,26 @@
   <ItemGroup>
     <None Remove="cafe-mama-ebb52-firebase-adminsdk-v270c-a9c1316cbb.json" />
     <None Remove="Views\images\background.jpg" />
+    <None Remove="Views\images\cafe_americano.jpg" />
+    <None Remove="Views\images\cafe_bacxiu.jpg" />
+    <None Remove="Views\images\cafe_cappuccino.jpg" />
+    <None Remove="Views\images\cafe_caramellatte.jpg" />
+    <None Remove="Views\images\cafe_coldbrew.jpg" />
+    <None Remove="Views\images\cafe_cotdua.jpg" />
     <None Remove="Views\images\cafe_den.jpg" />
+    <None Remove="Views\images\cafe_duaxay.jpg" />
+    <None Remove="Views\images\cafe_eggcoffee.jpg" />
+    <None Remove="Views\images\cafe_espresso.jpg" />
+    <None Remove="Views\images\cafe_hazelnutlatte.jpg" />
+    <None Remove="Views\images\cafe_icedamericano.jpg" />
+    <None Remove="Views\images\cafe_icedlatte.jpg" />
+    <None Remove="Views\images\cafe_icedmocha.jpg" />
+    <None Remove="Views\images\cafe_kemcheese.jpg" />
+    <None Remove="Views\images\cafe_latte.jpg" />
     <None Remove="Views\images\cafe_lua_mach.jpg" />
+    <None Remove="Views\images\cafe_macchiato.jpg" />
+    <None Remove="Views\images\cafe_matchacoffee.jpg" />
+    <None Remove="Views\images\cafe_mocha.jpg" />
     <None Remove="Views\images\cafe_sua_da.jpg" />
     <None Remove="Views\images\logo.png" />
     <None Remove="Views\images\nuoc_ep_cam.jpg" />
@@ -25,10 +43,64 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Views\images\cafe_americano.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_bacxiu.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_cappuccino.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_caramellatte.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_coldbrew.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_cotdua.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\images\cafe_den.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\images\cafe_duaxay.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_eggcoffee.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_espresso.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_hazelnutlatte.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_icedamericano.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_icedlatte.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_icedmocha.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_kemcheese.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_latte.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\images\cafe_lua_mach.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_macchiato.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_matchacoffee.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\images\cafe_mocha.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\images\cafe_sua_da.jpg">

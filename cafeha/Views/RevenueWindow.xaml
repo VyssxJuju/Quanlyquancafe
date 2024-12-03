@@ -1,7 +1,7 @@
 ﻿<Window x:Class="cafeha.Views.RevenueWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Thống Kê Doanh Thu" Height="600" Width="800">
+        Title="Thống Kê Doanh Thu" Height="500" Width="800">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -23,20 +23,23 @@
             <TextBlock x:Name="RevenueTodayTextBlock" FontSize="16" FontWeight="Bold" Foreground="Green"/>
         </StackPanel>
 
-        <!-- Doanh thu tuần này -->
-
         <!-- Doanh thu tháng này -->
-        <StackPanel Orientation="Vertical" Grid.Row="3" Margin="0,10">
+        <StackPanel Orientation="Vertical" Grid.Row="2" Margin="0,10">
             <TextBlock Text="Doanh thu tháng này:" Margin="0,0,0,5"/>
             <TextBlock x:Name="RevenueMonthTextBlock" FontSize="16" FontWeight="Bold" Foreground="Orange"/>
         </StackPanel>
 
-        <!-- DataGrid hiển thị doanh thu theo tháng -->
-        <DataGrid x:Name="RevenueDataGrid" AutoGenerateColumns="False" Grid.Row="4" Margin="0,10,0,0" Height="200">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Tháng/Năm" Binding="{Binding TimePeriod}" Width="200"/>
-                <DataGridTextColumn Header="Doanh Thu (VND)" Binding="{Binding Revenue}" Width="200"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <!-- Doanh thu các tháng trước -->
+        <StackPanel Orientation="Vertical" Grid.Row="3" Margin="0,10">
+            <TextBlock Text="Doanh thu các tháng trước:" Margin="0,0,0,5"/>
+            <DataGrid x:Name="PreviousMonthsRevenueDataGrid" AutoGenerateColumns="False" Height="200">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Tháng/Năm" Binding="{Binding TimePeriod}" Width="200"/>
+                    <DataGridTextColumn Header="Doanh Thu (VND)" Binding="{Binding Revenue, StringFormat='{}{0:N0}'}" Width="200"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <!-- Doanh thu chi tiết (theo từng ngày hoặc khác nếu cần) -->
     </Grid>
 </Window>

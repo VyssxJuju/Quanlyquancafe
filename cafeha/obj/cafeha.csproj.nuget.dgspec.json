@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\cafeha.csproj": {}
+    "D:\\CODE\\btl_quanlyquancafe\\cafeha\\cafeha\\cafeha.csproj": {}
   },
   "projects": {
-    "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\cafeha.csproj": {
+    "D:\\CODE\\btl_quanlyquancafe\\cafeha\\cafeha\\cafeha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\cafeha.csproj",
+        "projectUniqueName": "D:\\CODE\\btl_quanlyquancafe\\cafeha\\cafeha\\cafeha.csproj",
         "projectName": "cafeha",
-        "projectPath": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\cafeha.csproj",
-        "packagesPath": "C:\\Users\\hadin\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\btl_quanlyquancafe\\cafeha\\cafeha\\obj\\",
+        "projectPath": "D:\\CODE\\btl_quanlyquancafe\\cafeha\\cafeha\\cafeha.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\CODE\\btl_quanlyquancafe\\cafeha\\cafeha\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hadin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,8 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -73,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
